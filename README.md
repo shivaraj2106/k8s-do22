@@ -57,7 +57,10 @@ Common Use Cases
 	•	Ensuring high availability by running multiple replicas of the same app.
 	•	Integrating into CI/CD pipelines for automated deployments.
 
-Official Kubernetes documentations:
-👉https://kubernetes.io/docs/concepts/workloads/pods/
-👉https://kubernetes.io/docs/concepts/overview/working-with-objects/
-👉https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+Official Kubernetes documentations:  
+
+👉https://kubernetes.io/docs/concepts/workloads/pods/  
+
+👉https://kubernetes.io/docs/concepts/overview/working-with-objects/  
+
+👉https://kubernetes.io/docs/concepts/workloads/controllers/deployment/  
