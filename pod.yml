@@ -1,3 +1,5 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
+# Note that we wont be creatinf pods directly we would rather be using deployments for the same
 apiVersion: v1
 kind: Pod
 metadata:
