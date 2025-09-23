@@ -80,3 +80,8 @@ Kubernetes then handles **creating, updating, and maintaining** that state autom
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)  
 
 ---
+
+Services:
+
+for creating a test echo pod:   
+kubectl run curl --rm -it --image=curlimages/curl --restart=Never -- sh   
