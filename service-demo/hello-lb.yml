@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: hello
+  ports:
+  - port: 80
+    targetPort: 80
+# to test use : for i in {1..8}; do curl -s http://127.0.0.1:80 | head -n 2; echo "----"; done  after scaling or even before scaling if replicas >= 2
