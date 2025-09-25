@@ -20,8 +20,10 @@ spec:
           - sh
           - -c
           - |
-            echo "Hello from $(hostname)" > /usr/share/nginx/html/index.html
-            date >> /usr/share/nginx/html/index.html
+            if [ ! -f /usr/share/nginx/html/index.html ]; then
+              echo "Hello from $(hostname)" > /usr/share/nginx/html/index.html
+              date >> /usr/share/nginx/html/index.html
+            fi
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
@@ -41,3 +43,9 @@ spec:
       resources:
         requests:
           storage: 100Mi
+
+
+#  to test:
+#  kubectl run curl --rm -it --image=curlimages/curl --restart=Never -- sh
+# one line cmd to modify web-0 by exec : 
+# kubectl exec -it web-0 -- sh -c 'echo "Appended at $(date)" >> /usr/share/nginx/html/index.html && tail -n 2 /usr/share/nginx/html/index.html'
