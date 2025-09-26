@@ -39,7 +39,8 @@ spec:
   - metadata:
       name: www
     spec:
-      accessModes: ["ReadWriteOnce"]
+      accessModes: ["ReadWriteOnce"] 
+      # other modes: ReadOnlyMany / ReadWriteMany
       resources:
         requests:
           storage: 100Mi

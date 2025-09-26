@@ -6,7 +6,9 @@ spec:
   containers:
   - name: demo
     image: busybox
-    command: [ "sh" , "-c", "echo App mode: $APP_MODE ; echo App port: $APP_PORT; sleep 3600" ]
+    command: [ "sh" , "-c", "echo App mode: $APP_MODE`` ; echo App port: $APP_PORT; sleep 3600" ]
     envFrom:
     - configMapRef:
         name: app-config
+
+#  to test: apply the file and check logs for the pod created here should display the env var 

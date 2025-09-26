@@ -13,3 +13,5 @@ spec:
   - name: config-volume
     configMap:
         name: app-config
+
+# test: apply the file and run  kubectl exec -it <pod-name> -- cat /etc/config/<env-var>
